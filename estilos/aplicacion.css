@@ -1,0 +1,28 @@
+.banner-top {
+	height: 100vh;
+	max-width: 100%;
+	position: relative;
+	text-shadow: .1rem .1rem 0 black;
+	width: 100vw;
+}
+
+.banner-top:before {
+	background: url('../imagenes/header.jpeg') center center no-repeat / cover;
+	content: '';
+	height: 100%;
+	left: 0;
+	mix-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.row {
+	align-content: center;
+	height: 100%;
+}
+
+.row > h1 {
+	border-bottom: 1px solid white;
+	margin-bottom: 1rem;
+}
