@@ -26,3 +26,9 @@
 	border-bottom: 1px solid white;
 	margin-bottom: 1rem;
 }
+
+.fab {
+	font-size: 3rem;
+	height: 4.5rem;
+	width: 4.5rem;
+}
