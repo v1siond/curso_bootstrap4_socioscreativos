@@ -14,7 +14,21 @@
     <title>Curso Bootstrap - Socios Creativos</title>
   </head>
   <body>
-    <header class="align-items-center bg-info banner-top d-flex justify-content-center container-fluid mw-100 position-relative shadow-sm text-center text-light w-100">
+    <header class="align-items-center bg-info banner-top d-flex justify-content-center container-fluid mw-100 shadow-sm text-center text-light w-100" id="home">
+      <nav class="fixed-top justify-content-end navbar navbar-dark bg-transparent">
+        <button class="border border-dark bg-dark navbar-toggler" data-toggle="collapse" data-target="#nav">
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <ul class="align-items-end navbar-nav navbar-collapse collapse" id="nav">
+          <a class="nav-link active" href="index.html#home">Home</a>
+          <a class="nav-link" href="index.html#about">Sobre Mi</a>
+          <a class="nav-link" href="index.html#habilidades">Habilidades</a>
+          <a class="nav-link" href="index.html#blog">Blog</a>
+          <a class="nav-link disabled" href="index.html#contacto">Contacto</a>
+          <li class="fixed-top menu-screen position-absolute w-100"></li>
+        </ul>
+      </nav>
+
       <article class="col-md-10 col-lg-5">
         <h1 class="display-4 border-bottom border-light py-3">
           Curso de Bootstrap 4 por Socios Creativos
@@ -137,9 +151,36 @@
         </div>
       </section>
     </main>
-    <footer>
-      <article class="row">
-      </article>
+    <footer class="align-items-center bg-info d-flex justify-content-center flex-wrap text-light" id="contacto">
+      <ul class="list-inline mt-3 text-center">
+        <li class="list-inline-item mr2">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <p>Twitter</p>
+        </li>
+        <li class="list-inline-item mr2">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-github"></i>
+          </a>
+          <p>Github</p>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <p>Facebook</p>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fas fa-phone"></i>
+          </a>
+          <p>Facebook</p>
+        </li>
+      </ul>
+      <p class="w-100 text-center small mb-1">
+        Copyright &copy; Socios Creativos 2018
+      </p>
     </footer>
     
 

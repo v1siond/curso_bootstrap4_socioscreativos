@@ -1,5 +1,8 @@
 .banner-top {
 	height: 100vh;
+}
+
+.banner-top > article {
 	text-shadow: .1rem .1rem 0 black;
 }
 
@@ -15,7 +18,7 @@
 }
 
 
-.fab {
+.d-flex.fab {
 	font-size: 3rem;
 	height: 4.5rem;
 	width: 4.5rem;
@@ -43,4 +46,19 @@
 .caption {
 	background-color: rgba(0,0,0, .75);
 	height: 3rem;
+}
+
+.social-link {
+	font-size: 2.5rem;
+}
+
+.show > .menu-screen {
+	background-color: rgba(0,0,0, .75);
+	height: 100vh;
+	z-index: 0;
+}
+
+.nav-link,
+.navbar-toggler {
+	z-index: 2;
 }
