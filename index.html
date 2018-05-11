@@ -6,17 +6,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="estilos/aplicacion.css">
+
+    <title>Curso Bootstrap - Socios Creativos</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <header class="align-items-center bg-info banner-top d-flex justify-content-center container-fluid mw-100 shadow-sm text-center text-light w-100" id="home">
+      <nav class="fixed-top justify-content-end navbar navbar-dark bg-transparent">
+        <button class="border border-dark bg-dark navbar-toggler" data-toggle="collapse" data-target="#nav">
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <ul class="align-items-end navbar-nav navbar-collapse collapse" id="nav">
+          <a class="nav-link active" href="index.html#home">Home</a>
+          <a class="nav-link" href="index.html#about">Sobre Mi</a>
+          <a class="nav-link" href="index.html#habilidades">Habilidades</a>
+          <a class="nav-link" href="index.html#blog">Blog</a>
+          <a class="nav-link disabled" href="index.html#contacto">Contacto</a>
+          <li class="fixed-top menu-screen position-absolute w-100"></li>
+        </ul>
+      </nav>
+
+      <article class="col-md-10 col-lg-5">
+        <h1 class="display-4 border-bottom border-light py-3">
+          Curso de Bootstrap 4 por Socios Creativos
+        </h1>
+        <h3 class="lead">
+          [PRÁCTICA]: Sitio Web Personal
+        </h3>
+      </article>
+    </header>
+    <main>
+      <section class="container-fluid bg-light py-5" id="about">
+        <div class="row text-center">
+          <div class="col">
+            <h2 class="mb-5">Sobre mi</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid bg-dark text-center text-white py-5" id="habilidades">
+        <h2 class="mb-5">Habilidades</h2>
+        <div class="container">
+          <div class="row">
+            <article class="col-md-6 col-lg-3 mb-2">
+              <i class="align-items-center bg-light rounded-circle d-flex justify-content-center text-dark mx-auto fab fa-css3-alt"></i>
+              <h4>CSS</h4>
+              <p>Nivel: Experto</p>
+            </article>
+            <article class="col-md-6 col-lg-3 mb-2">
+              <i class="align-items-center bg-light rounded-circle d-flex justify-content-center text-dark mx-auto fab fa-php"></i>
+              <h4>PHP</h4>
+              <p>Nivel: Experto</p>
+            </article>
+            <article class="col-md-6 col-lg-3 mb-2">
+              <i class="align-items-center bg-light rounded-circle d-flex justify-content-center text-dark mx-auto fab fa-phoenix-framework"></i>
+              <h4>Phoenix</h4>
+              <p>Nivel: Avanzado</p>
+            </article>
+            <article class="col-md-6 col-lg-3 mb-2">
+              <i class="align-items-center bg-light rounded-circle d-flex justify-content-center text-dark mx-auto fab fa-js"></i>
+              <h4>JavaScript</h4>
+              <p>Nivel: Avanzado</p>
+            </article>
+          </div>         
+        </div>
+      </section>
+      <section class="bg-warning container-fluid text-center text-white py-5" id="portfolio">
+        <h2 class="mb-5">Proyectos Recientes</h2>
+        <article class="d-flex flex-wrap justify-content-center no-gutters mx-auto">
+          <a href="#" class="col-lg-5 m-2 position-relative shadow portfolio-link">
+            <figure>
+              <img src="imagenes/project1.jpg" alt="" class="img-fluid img-thumbnail h-100">
+              <figcaption class="caption fixed-bottom p-2 w-100 position-absolute  text-left text-light">
+                <h3>Nombre del Proyecto</h3>
+                <p class="lead mb-0">Descripción de aportes</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="col-lg-5 m-2 position-relative shadow portfolio-link">
+            <figure>
+              <img src="imagenes/project2.jpg" alt="" class="img-fluid img-thumbnail h-100">
+              <figcaption class="caption fixed-bottom p-2 w-100 position-absolute  text-left text-light">
+                <h3>Nombre del Proyecto</h3>
+                <p class="lead mb-0">Descripción de aportes</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="col-lg-5 m-2 position-relative shadow portfolio-link">
+            <figure>
+              <img src="imagenes/project3.jpeg" alt="" class="img-fluid img-thumbnail h-100">
+              <figcaption class="caption fixed-bottom p-2 w-100 position-absolute  text-left text-light">
+                <h3>Nombre del Proyecto</h3>
+                <p class="lead mb-0">Descripción de aportes</p>
+              </figcaption>
+            </figure>
+          </a>
+          <a href="#" class="col-lg-5 m-2 position-relative shadow portfolio-link">
+            <figure>
+              <img src="imagenes/project4.jpeg" alt="" class="img-fluid img-thumbnail h-100">
+              <figcaption class="caption fixed-bottom p-2 w-100 position-absolute text-left text-light">
+                <h3>Nombre del Proyecto</h3>
+                <p class="lead mb-0">Descripción de aportes</p>
+              </figcaption>
+            </figure>
+          </a>          
+        </article>
+      </section>
+      <section class="bg-light container-fluid text-center py-5 shadow-sm" id="blog">
+        <h2 class="w-100 text-center mb-5">Últimos Post</h2>
+        <div class="container d-flex justify-content-around flex-wrap">
+          <article class="card col-lg-3 mb-4 p-0">
+            <img src="imagenes/project4.jpeg" alt="" class="card-img-top">
+            <span class="card-header">
+              <h2 class="card-title">Título del Árticulo</h2>
+            </span>
+            <span class="card-body text-left">
+              <p class="card-text">Éste es un texto largo que será truncado...</p>
+            </span>
+            <a href="#" class="btn btn-outline-primary btn-lg">Ir al Post</a>
+          </article>
+          <article class="card col-lg-3 mb-4 p-0">
+            <img src="imagenes/project4.jpeg" alt="" class="card-img-top">
+            <span class="card-header">
+              <h2 class="card-title">Título del Árticulo</h2>
+            </span>
+            <span class="card-body text-left">
+              <p class="card-text">Éste es un texto largo que será truncado...</p>
+            </span>
+            <a href="#" class="btn btn-outline-primary btn-lg">Ir al Post</a>
+          </article>
+          <article class="card col-lg-3 mb-4 p-0">
+            <img src="imagenes/project4.jpeg" alt="" class="card-img-top">
+            <span class="card-header">
+              <h2 class="card-title">Título del Árticulo</h2>
+            </span>
+            <span class="card-body text-left">
+              <p class="card-text">Éste es un texto largo que será truncado...</p>
+            </span>
+            <a href="#" class="btn btn-outline-primary btn-lg">Ir al Post</a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="align-items-center bg-info d-flex justify-content-center flex-wrap text-light" id="contacto">
+      <ul class="list-inline mt-3 text-center">
+        <li class="list-inline-item mr2">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <p>Twitter</p>
+        </li>
+        <li class="list-inline-item mr2">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-github"></i>
+          </a>
+          <p>Github</p>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <p>Facebook</p>
+        </li>
+        <li class="list-inline-item">
+          <a href="#" class="social-link badge badge-info">
+            <i class="fas fa-phone"></i>
+          </a>
+          <p>Facebook</p>
+        </li>
+      </ul>
+      <p class="w-100 text-center small mb-1">
+        Copyright &copy; Socios Creativos 2018
+      </p>
+    </footer>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
