@@ -1,9 +1,6 @@
 .banner-top {
 	height: 100vh;
-	max-width: 100%;
-	position: relative;
 	text-shadow: .1rem .1rem 0 black;
-	width: 100vw;
 }
 
 .banner-top:before {
@@ -17,18 +14,33 @@
 	width: 100%;
 }
 
-.row {
-	align-content: center;
-	height: 100%;
-}
-
-.row > h1 {
-	border-bottom: 1px solid white;
-	margin-bottom: 1rem;
-}
 
 .fab {
 	font-size: 3rem;
 	height: 4.5rem;
 	width: 4.5rem;
+}
+
+.portfolio-link {
+	max-height: 22.5rem;
+	overflow: hidden;
+	transition: all .5s;
+}
+
+.portfolio-link:hover {
+	background-color: #17A2B8;
+	transform: scale(.9);
+}
+
+.portfolio-link:hover > figure > img {
+	mix-blend-mode: multiply;
+}
+.portfolio-link:hover > figure > .caption {
+	height: 100%;
+	transition: all .5s;
+}
+
+.caption {
+	background-color: rgba(0,0,0, .75);
+	height: 3rem;
 }
