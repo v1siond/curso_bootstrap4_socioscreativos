@@ -8,16 +8,573 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-
-    <link rel="stylesheet" href="estilos/aplicacion.css">
+    <link rel="stylesheet" href="estilos/panel_de_control.css">
 
     <title>Curso Bootstrap - Socios Creativos</title>
+
   </head>
   <body class="bg-light">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!-- Inicio Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navPrincipal">
+      <a href="index.html" class="navbar-brand">Socios Creativos</a>
+      <button class="navbar-toggler navbar-toggler-right" aria-controls="menu" aria-expanded="false" aria-label="Mostrar/Ocultar Menu" data-target="#menu" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú Lateral-->
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav navbar-sidenav bg-dark" id="menu-acordeon">
+
+          <!-- Panel de Control -->
+          <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Panel de Control">
+            <a href="index.html" class="nav-link">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span class="nav-link-text">Panel de Control</span>
+            </a>
+          </li>
+
+          <!-- Gráficos -->
+          <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Gráficos">
+            <a href="graficos.html" class="nav-link">
+              <i class="fa fa-fw fa-bar-chart"></i>
+              <span class="nav-link-text">Gráficos</span>
+            </a>
+          </li>
+
+          <!-- Tablas -->
+          <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Tablas">
+            <a href="tablas.html" class="nav-link">
+              <i class="fa fa-fw fa-table"></i>
+              <span class="nav-link-text">Tablas</span>
+            </a>
+          </li>
+
+          <!-- Páginas -->
+          <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Páginas de Ejemplo">
+            <a href="#paginas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-parent="#menu-acordeon">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">Páginas de Ejemplo</span>
+            </a>
+            <ul class="nav-nivel-2 collapse" id="paginas">
+              <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="registrar_usuario.html">Registrar Usuario</a></li>
+              <li class="nav-item"><a class="nav-link" href="recuperar_password.html">Olvidé mi Contraseña</a></li>
+              <li class="nav-item"><a class="nav-link" href="blanco.html">Página en blanco</a></li>
+            </ul>
+          </li>
+
+          <!-- Aumentar/Reducir Tamaño -->
+          <li class="nav-item nav-boton-tamaño d-none d-lg-block">
+            <a href="#" class="nav-link text-center" id="nav-boton-tamaño">
+              <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Nuevos Mensajes -->
+        <ul class="navbar-nav second-nav">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="mensajes" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+              <i class="fa fa-fw fa-envelope"></i>
+              <span class="d-lg-none">
+                Mensajes
+                <span class="badge badge-pill badge-primary">12 Nuevos</span>
+              </span>
+              <span class="indicador text-primary d-none d-lg-block">
+                <i class="fa fa-fw fa-circle"></i>
+              </span>
+            </a>
+            <section class="dropdown-menu" aria-labelledby="mensajes">
+              <h6 class="dropdown-header">Nuevos Mensajes:</h6>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <strong>Nombre de Usuario</strong>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <strong>Nombre de Usuario</strong>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <strong>Nombre de Usuario</strong>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item small">
+                Ver todos los mensajes
+              </a>
+            </section>
+          </li>
+
+          <!-- Nuevas Notificaciones -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="mensajes" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
+              <i class="fa fa-fw fa-bell"></i>
+              <span class="d-lg-none">
+                Notificaciones
+                <span class="badge badge-pill badge-warning">6 Nuevas</span>
+              </span>
+              <span class="indicador text-warning d-none d-lg-block">
+                <i class="fa fa-fw fa-circle"></i>
+              </span>
+            </a>
+            <section class="dropdown-menu" aria-labelledby="mensajes">
+              <h6 class="dropdown-header">Nuevas Notificaciones:</h6>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <span class="text-success">
+                  <strong>Nombre de Usuario</strong>
+                </span>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <span class="text-warning">
+                  <strong>Nombre de Usuario</strong>
+                </span>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item d-flex justify-content-between flex-wrap">
+                <span class="text-danger">
+                  <strong>Nombre de Usuario</strong>
+                </span>
+                <span class="small text-muted">13:41</span>
+                <article class="dropdown-message small w-100">Hola! Bienvenido a la práctica final del curso de Bootstrap dictado por Socios Creativos</article>
+              </a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item small">
+                Ver todas las notificaciones
+              </a>
+            </section>
+          </li>
+
+          <!-- Buscar -->
+          <li class="nav-item">
+            <form action="" class="form-inline my-3">
+              <article class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar...">
+                <span class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </article>
+            </form>
+          </li>
+
+          <!-- Salir del Sistema -->
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#salir" href="#">
+              <i class="fas fa-fw fa-sign-out-alt"></i>
+              Salir
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- Contenido Principal -->
+    <main class="container-fluid big" id="contenido-panel">
+
+      <!-- Navegación por sección -->
+      <nav id="top">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Panel de Control</a>
+          </li>
+          <li class="breadcrumb-item active">Inicio</li>
+        </ol>
+      </nav>
+
+      <!-- Notificaciones -->
+      <section class="row">
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <article class="card text-white bg-primary">
+            <div class="card-body">
+              <span class="icono">
+                <fas class="fa fa-fw fa-comments"></fas>
+              </span>
+              <span class="">14 Mensajes Nuevos</span>
+            </div>
+            <a href="#" class="card-footer text-white small z-1 d-flex justify-content-between w-100">
+              <span>Ver Detalles</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <article class="card text-white bg-danger">
+            <div class="card-body">
+              <span class="icono">
+                <fas class="fa fa-fw fa-list"></fas>
+              </span>
+              <span class="">18 Tareas Pendientes</span>
+            </div>
+            <a href="#" class="card-footer text-white small z-1 d-flex justify-content-between w-100">
+              <span>Ver Detalles</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <article class="card text-white bg-success">
+            <div class="card-body">
+              <span class="icono">
+                <fas class="fa fa-fw fa-shopping-cart"></fas>
+              </span>
+              <span class="">4 Órdenes Nuevas</span>
+            </div>
+            <a href="#" class="card-footer text-white small z-1 d-flex justify-content-between w-100">
+              <span>Ver Detalles</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </article>
+        </div>
+        <div class="col-sm-6 col-xl-3 mb-3">
+          <article class="card text-white bg-warning">
+            <div class="card-body">
+              <span class="icono">
+                <fas class="fa fa-fw fa-bell"></fas>
+              </span>
+              <span class="">7 Nuevas Notificaciones</span>
+            </div>
+            <a href="#" class="card-footer text-white small z-1 d-flex justify-content-between w-100">
+              <span>Ver Detalles</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gráficos -->
+      <section class="card mb-3">
+        <header class="card-header"><i class="fas fw fa-chart-area mr-2"></i>Visitas Diarias</header>
+        <article class="card-body">
+          <canvas id="graficoArea" width="100%" height="35"></canvas>
+        </article>
+        <footer class="card-footer small text-muted">Última Actualización ayer a las 17:47:07</footer>
+      </section>
+      
+      <!-- diseño doble columna - Post y gráficos complementarios -->
+
+      <section class="row">
+        <aside class="col-lg-8">
+
+          <!-- Gráfico de Barras -->
+          <div class="card mb-3">
+            <header class="card-header"><i class="fa fa-fw fa-bar-chart mr-2"></i>Cantidad de Encargos</header>
+            <article class="card-body d-flex justify-content-center flex-wrap">
+              <div class="col-sm-8">
+                <canvas id="graficoBarras" width="100%" height="45"></canvas>
+              </div>
+              <dl class="col-sm-4 text-center my-auto">
+                <dl class="h4 mb-0 text-primary">50,00</dl>
+                <dd class="small text-muted">Proyecto 1</dd>
+                <hr>
+                <dl class="h4 mb-0 text-warning">30,00</dl>
+                <dd class="small text-muted">Proyecto 2</dd>
+                <hr>
+                <dl class="h4 mb-0 text-success">150,00</dl>
+                <dd class="small text-muted">Proyecto 3</dd>
+                <hr>
+              </dl>
+            </article>
+            <footer class="card-footer small text-muted">Última Actualización hoy a las 9:12:09</footer>
+          </div>
+
+          <!-- Últimos Post Publicados -->
+          <h6 class="mb-0 mt-4">
+            <fa class="fa fa-fw fa-newspaper"></fa>
+            Nuevos Post
+          </h6>
+          <hr class="mt-2">
+
+          <!-- Columna de Artículos -->
+          <section class="card-columns">
+            <div class="card mb-3">
+              <a href="#"><img src="imagenes/post1.jpg" alt="" class="card-img-top img-fluid w-100"></a>
+              <article class="card-body">
+                <h6 class="card-title mb-1"><a href="#">Post del Artículo</a></h6>
+                <p class="card-text small">Bienvenidos al curso de Bootstrap dictado por Socios Creativos, en el video de hoy...<a href="#">#bootstrap</a></p>
+              </article>
+              <hr class="my-0">
+              <article class="card-body py-2 small">
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-thumbs-up"></i>Me Gusta</a>
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-comments"></i>Comentar</a>
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-share"></i>Compartir</a>
+              </article>
+              <footer class="card-footer small text-muted">Publicado Ayer</footer>
+            </div>
+            <div class="card mb-3">
+              <a href="#"><img src="imagenes/post2.jpg" alt="" class="card-img-top img-fluid w-100"></a>
+              <article class="card-body">
+                <h6 class="card-title mb-1"><a href="#">Post del Artículo</a></h6>
+                <p class="card-text small">Bienvenidos al curso de Bootstrap dictado por Socios Creativos, en el video de hoy...<a href="#">#bootstrap</a></p>
+              </article>
+              <hr class="my-0">
+              <article class="card-body py-2 small">
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-thumbs-up"></i>Me Gusta</a>
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-comments"></i>Comentar</a>
+                <a href="#" class="mr-3 d-inline-block"><i class="fa fa-fw fa-share"></i>Compartir</a>
+              </article>
+              <hr class="my-0">
+              <article class="card-body small">
+                <div class="media">
+                  <img src="imagenes/post1.jpg" alt="" class="mr-3">
+                  <div class="media-body">
+                    <h6 class="mt-0 mb-1"><a href="#">Usuario 1</a></h6>
+                    Excelente artículo, muy interesante el sistema de...
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item"><a href="#">Me gusta</a></li>
+                      <li class="list-inline-item"><a href="#">-</a></li>
+                      <li class="list-inline-item"><a href="#">Responder</a></li>
+                    </ul>
+                    <div class="media mt-3">
+                      <img src="imagenes/post2.jpg" alt="" class="mr-3">
+                      <div class="media-body">
+                        <h6 class="mt-0 mb-1"><a href="#">Usuario 1</a></h6>
+                        Excelente artículo, muy interesante el sistema de...
+                        <ul class="list-inline mb-0">
+                          <li class="list-inline-item"><a href="#">Me gusta</a></li>
+                          <li class="list-inline-item"><a href="#">-</a></li>
+                          <li class="list-inline-item"><a href="#">Responder</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <footer class="card-footer small text-muted">Publicado Jueves 05 de Junio de 2018</footer>
+            </div>
+          </section>
+        </aside>
+        <aside class="col-lg-4">
+
+          <!-- Gráfico Ganancias -->
+          <div class="card mb-3">
+            <header class="card-header">
+              <fa class="fa fa-fw fa-chart-pie"></fa>
+              Ganancias
+            </header>
+            <article class="card-body">
+              <canvas id="graficoPie" width="100%" height="80"></canvas>
+            </article>
+            <footer class="card-footer small text-muted">Última Actualización miércoles 04 de 2018 a las 14:37:48</footer>
+          </div>
+
+          <!-- Última Actividad -->
+          <section class="card mb-3" id="actividad">
+            <header class="card-header">Actividad Reciente<i class="fa fa-fw fa-bell-o"></i></header>
+            <ul class="list-group list-group-flush small">
+              <a href="#" class="list-group-item list-group-item-action">
+                <span class="media">
+                  <img src="imagenes/project1.jpg" alt="" class="mr-3 rounded-circle">
+                  <article class="media-body">
+                    <strong>Usuario 2</strong>
+                    Dejó un comentario en
+                    <strong>Titulo del Artículo</strong>
+                    <p class="text-muted smaller">Hoy a las 15:57 - hace 3m</p>
+                  </article>
+                </span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <span class="media">
+                  <img src="imagenes/post2.jpg" alt="" class="mr-3 rounded-circle">
+                  <article class="media-body">
+                    <strong>Usuario 2</strong>
+                    Dejó un comentario en
+                    <strong>Titulo del Artículo</strong>
+                    <p class="text-muted smaller">Hoy a las 15:57 - hace 3m</p>
+                  </article>
+                </span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <span class="media">
+                  <img src="imagenes/project2.jpg" alt="" class="mr-3 rounded-circle">
+                  <article class="media-body">
+                    <strong>Usuario 2</strong>
+                    Dejó un comentario en
+                    <strong>Titulo del Artículo</strong>
+                    <p class="text-muted smaller">Hoy a las 15:57 - hace 3m</p>
+                  </article>
+                </span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <span class="media">
+                  <img src="imagenes/post1.jpg" alt="" class="mr-3 rounded-circle">
+                  <article class="media-body">
+                    <strong>Usuario 2</strong>
+                    Dejó un comentario en
+                    <strong>Titulo del Artículo</strong>
+                    <p class="text-muted smaller">Hoy a las 15:57 - hace 3m</p>
+                  </article>
+                </span>
+              </a>
+            </ul>
+          </section>
+        </aside>
+      </section>
+
+      <!-- Tabla - Datos Web -->
+      <section class="card mb-3">
+        <header class="card-header">Datos de la Web<i class="fa fa-fw fa-table"></i></header>
+        <article class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-bordered text-center mb-0" id="tablaDatos" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Mes</th>
+                  <th>Artículos</th>
+                  <th>Comentarios</th>
+                  <th>Proyectos</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="small text-muted">Enero</th>
+                  <th class="small text-muted">48</th>
+                  <th class="small text-muted">1267</th>
+                  <th class="small text-muted">4</th>
+                  <th class="small text-muted">$2734,39</th>
+                </tr>
+                <tr>
+                  <th class="small text-muted">Febrero</th>
+                  <th class="small text-muted">48</th>
+                  <th class="small text-muted">1267</th>
+                  <th class="small text-muted">4</th>
+                  <th class="small text-muted">$2734,39</th>
+                </tr>
+                <tr>
+                  <th class="small text-muted">Marzo</th>
+                  <th class="small text-muted">48</th>
+                  <th class="small text-muted">1267</th>
+                  <th class="small text-muted">4</th>
+                  <th class="small text-muted">$2734,39</th>
+                </tr>
+                <tr>
+                  <th class="small text-muted">Abril</th>
+                  <th class="small text-muted">48</th>
+                  <th class="small text-muted">1267</th>
+                  <th class="small text-muted">4</th>
+                  <th class="small text-muted">$2734,39</th>
+                </tr>
+                <tr>
+                  <th class="small text-muted">Mayo</th>
+                  <th class="small text-muted">48</th>
+                  <th class="small text-muted">1267</th>
+                  <th class="small text-muted">4</th>
+                  <th class="small text-muted">$2734,39</th>
+                </tr>
+                <tr>
+                  <th class="small text-muted">Junio</th>
+                  <th class="small text-muted">2</th>
+                  <th class="small text-muted">68</th>
+                  <th class="small text-muted">2</th>
+                  <th class="small text-muted">$34,39</th>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Mes</th>
+                  <th>Artículos</th>
+                  <th>Comentarios</th>
+                  <th>Proyectos</th>
+                  <th>Balance</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </article>
+
+        <!-- Paginación -->
+        <nav class="align-items-center d-flex flex-wrap justify-content-between py-4">
+          <p class="small text-center col-md-5 my-0">Mostrando 1 a 10 de 68 entradas</p>
+          <ol class="col-md-6 col-xl-6 pagination justify-content-center my-0">
+            <li class="page-item"><a href="" class="page-link">&larr;</a></li>
+            <li class="page-item"><a href="" class="page-link">1</a></li>
+            <li class="page-item"><a href="" class="page-link">2</a></li>
+            <li class="page-item"><a href="" class="page-link">3</a></li>
+            <li class="page-item"><a href="" class="page-link">4</a></li>
+            <li class="page-item"><a href="" class="page-link">5</a></li>
+            <li class="page-item"><a href="" class="page-link">6</a></li>
+            <li class="page-item"><a href="" class="page-link">...</a></li>
+            <li class="page-item"><a href="" class="page-link">&rarr;</a></li>
+          </ol>         
+        </nav>
+      </section>
+    </main>
+    
+    
+    <!-- Footer -->
+    <footer id="mainFooter" class="sticky-footer big p-2">
+      <section class="container text-center">
+        <small>Copyright © Socios Creativos 2018</small>
+      </section>
+    </footer>
+
+    <!-- Botón top  -->
+    <a href="#top" class="top-boton rounded">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Modal para salir del sistema -->
+    <section class="modal fade" id="salir" aria-hidden="true" aria-labelledby="modalLabel" role="dialog" tabindex="-1">
+      <article class="modal-dialog" role="document">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h5 class="modal-title" id="modalLabel">¿Listo para irte?</h5>
+            <button class="close" aria-label="Close" data-dismiss="modal" type="button">
+              <span aria-hidden="true">x</span>
+            </button>
+          </header>
+          <article class="modal-body">Puedes finalizar la sesión haciendo click en salir.</article>
+          <footer class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal" type="button">Cancelar</button>
+            <a href="login.html" class="btn btn-primary">Salir</a>
+          </footer>
+        </div>
+      </article>
+    </section>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/graficos.js"></script>
+
+    <!-- Modificar el tamaño del Menú -->
+    <script>
+      let hideLink = $('.nav-link-text'),
+          hideLinkButton = $('#nav-boton-tamaño'),
+          menuTransform = $('#menu-acordeon'),
+          mainContainer = $('#contenido-panel'),
+          mainFooter = $('#mainFooter');
+
+      hideLinkButton.click(function(){
+        if (menuTransform.hasClass('small')) {
+          menuTransform.removeClass('small');
+          hideLink.show();
+          mainContainer.addClass('big');
+          mainFooter.addClass('big');
+        } else {
+          menuTransform.addClass('small');
+          hideLink.hide();
+          mainContainer.removeClass('big');
+          mainFooter.removeClass('big');
+        }
+        
+      });
+    </script>
   </body>
 </html>
