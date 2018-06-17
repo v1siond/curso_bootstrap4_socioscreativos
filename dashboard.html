@@ -24,11 +24,11 @@
 
       <!-- Menú Lateral-->
       <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav navbar-sidenav bg-dark" id="menu-acordeon">
+        <ul class="navbar-nav navbar-sidenav bg-dark position-absolute" id="menu-acordeon">
 
           <!-- Panel de Control -->
           <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Panel de Control">
-            <a href="index.html" class="nav-link">
+            <a href="index.html" class="nav-link p-3">
               <i class="fas fa-fw fa-tachometer-alt"></i>
               <span class="nav-link-text">Panel de Control</span>
             </a>
@@ -36,7 +36,7 @@
 
           <!-- Gráficos -->
           <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Gráficos">
-            <a href="graficos.html" class="nav-link">
+            <a href="graficos.html" class="nav-link p-3">
               <i class="fa fa-fw fa-bar-chart"></i>
               <span class="nav-link-text">Gráficos</span>
             </a>
@@ -44,7 +44,7 @@
 
           <!-- Tablas -->
           <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Tablas">
-            <a href="tablas.html" class="nav-link">
+            <a href="tablas.html" class="nav-link p-3">
               <i class="fa fa-fw fa-table"></i>
               <span class="nav-link-text">Tablas</span>
             </a>
@@ -52,7 +52,7 @@
 
           <!-- Páginas -->
           <li class="nav-item" data-placement="right" data-toggle="tooltip" title="Páginas de Ejemplo">
-            <a href="#paginas" class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-parent="#menu-acordeon">
+            <a href="#paginas" class="nav-link nav-link-collapse collapsed p-3" data-toggle="collapse" data-parent="#menu-acordeon">
               <i class="fa fa-fw fa-file"></i>
               <span class="nav-link-text">Páginas de Ejemplo</span>
             </a>
@@ -65,7 +65,7 @@
           </li>
 
           <!-- Aumentar/Reducir Tamaño -->
-          <li class="nav-item nav-boton-tamaño d-none d-lg-block">
+          <li class="nav-item nav-boton-tamaño d-none d-lg-block position-absolute w-100">
             <a href="#" class="nav-link text-center" id="nav-boton-tamaño">
               <i class="fa fa-fw fa-angle-left"></i>
             </a>
@@ -73,7 +73,7 @@
         </ul>
 
         <!-- Nuevos Mensajes -->
-        <ul class="navbar-nav second-nav">
+        <ul class="align-items-center d-flex justify-content-end navbar-nav second-nav w-100">
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="mensajes" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown">
               <i class="fa fa-fw fa-envelope"></i>
@@ -81,7 +81,7 @@
                 Mensajes
                 <span class="badge badge-pill badge-primary">12 Nuevos</span>
               </span>
-              <span class="indicador text-primary d-none d-lg-block">
+              <span class="indicador text-primary d-none d-lg-block position-absolute">
                 <i class="fa fa-fw fa-circle"></i>
               </span>
             </a>
@@ -120,7 +120,7 @@
                 Notificaciones
                 <span class="badge badge-pill badge-warning">6 Nuevas</span>
               </span>
-              <span class="indicador text-warning d-none d-lg-block">
+              <span class="indicador text-warning d-none d-lg-block position-absolute">
                 <i class="fa fa-fw fa-circle"></i>
               </span>
             </a>
@@ -201,7 +201,7 @@
         <div class="col-sm-6 col-xl-3 mb-3">
           <article class="card text-white bg-primary">
             <div class="card-body">
-              <span class="icono">
+              <span class="icono position-absolute">
                 <fas class="fa fa-fw fa-comments"></fas>
               </span>
               <span class="">14 Mensajes Nuevos</span>
@@ -215,7 +215,7 @@
         <div class="col-sm-6 col-xl-3 mb-3">
           <article class="card text-white bg-danger">
             <div class="card-body">
-              <span class="icono">
+              <span class="icono position-absolute">
                 <fas class="fa fa-fw fa-list"></fas>
               </span>
               <span class="">18 Tareas Pendientes</span>
@@ -229,7 +229,7 @@
         <div class="col-sm-6 col-xl-3 mb-3">
           <article class="card text-white bg-success">
             <div class="card-body">
-              <span class="icono">
+              <span class="icono position-absolute">
                 <fas class="fa fa-fw fa-shopping-cart"></fas>
               </span>
               <span class="">4 Órdenes Nuevas</span>
@@ -243,7 +243,7 @@
         <div class="col-sm-6 col-xl-3 mb-3">
           <article class="card text-white bg-warning">
             <div class="card-body">
-              <span class="icono">
+              <span class="icono position-absolute">
                 <fas class="fa fa-fw fa-bell"></fas>
               </span>
               <span class="">7 Nuevas Notificaciones</span>
@@ -524,7 +524,7 @@
     </footer>
 
     <!-- Botón top  -->
-    <a href="#top" class="top-boton rounded">
+    <a href="#top" class="top-boton rounded position-fixed bg-dark text-light">
       <i class="fa fa-angle-up"></i>
     </a>
     <!-- Modal para salir del sistema -->
@@ -575,6 +575,8 @@
         }
         
       });
+
+      $('[data-toggle="tooltip"]').tooltip();
     </script>
   </body>
 </html>

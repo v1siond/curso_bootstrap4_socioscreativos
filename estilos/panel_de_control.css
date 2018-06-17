@@ -8,7 +8,6 @@
 .nav-link-collapse:after,
 .nav-link.dropdown-toggle:after  {
 	border: none;
-	content: '\f107';
 	float: right;
 	font-family: 'Font Awesome 5 Free';
 	font-weight: bold;
@@ -17,8 +16,13 @@
 	width: 1.5rem;
 }
 
-.nav-link-collapse.collapsed:after,
+.nav-link-collapse:after,
 .show .nav-link.dropdown-toggle:after {
+	content: '\f107';
+}
+
+.nav-link-collapse.collapsed:after,
+.nav-link.dropdown-toggle:after {
 	content: '\f105';
 }
 
@@ -43,7 +47,6 @@
 		height: calc(100vh - 5rem);
 		left: 0;
 		margin-top: 5rem;
-		position: absolute;
 		top: 0;
 		transition: all .25s;
 		width: 15rem;
@@ -53,25 +56,13 @@
 		width: auto;
 	}
 
-	#menu-acordeon .nav-link {
-		padding: 1rem;
-	}
-
 	.navbar-nav .dropdown-message {
 		max-width: 20rem;
-	}
-
-	.second-nav {
-		align-items: center;
-		display: flex;
-		justify-content: flex-end;
-		width: 100%;
 	}
 
 	.nav-link.dropdown-toggle .indicador {
 		font-size: .65rem;
 		left: 1.2rem;
-		position: absolute;
 		top: .15rem;
 	}
 
@@ -99,8 +90,6 @@
 .nav-boton-tamaño {
 	background-color: black;
 	bottom: 0;
-	position: absolute;
-	width: 100%;
 }
 
 .navbar-nav .dropdown-message {
@@ -119,11 +108,9 @@
 
 .card-body .icono {
 	font-size: 3rem;
-	position: absolute;
 	right: -.75rem;
 	top: -.5rem;
 	transform: rotate(15deg);
-	z-index: 0;
 }
 
 .media > img {
@@ -137,11 +124,9 @@ th.lead {
 
 
 .top-boton {
-	background: grey;
 	bottom: 1.5rem;
 	color: white;
 	padding: .25rem .75rem;
-	position: fixed;
 	right: 1.5rem;
 	transition: all .25s;
 }
